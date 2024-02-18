@@ -1,13 +1,13 @@
 const { Router } = require('express');
-const productController = require('../../../controllers/task');
-const productValidation = require('../../../validation/task');
+const productController = require('../../../controllers/product');
+const productValidation = require('../../../validation/product');
 const validate = require('../../../middlewares/validate');
 
 const router = Router();
 
-router.get('/:id', validate(productValidation.getTaskById), productController.getTaskById);
-router.put('/', validate(productValidation.createTask), productController.createTask);
-router.post('/:id', validate(productValidation.updateTaskById), productController.updateTaskById);
+router.get('/:id', validate(productValidation.getProductById), productController.getProductById);
+router.put('/', validate(productValidation.createProduct), productController.createProduct);
+router.post('/:id', validate(productValidation.updateProductById), productController.updateProductById);
 
 module.exports = router;
 

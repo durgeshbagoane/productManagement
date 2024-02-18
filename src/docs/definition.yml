@@ -46,7 +46,7 @@ components:
         message:
           type: string
           description: The result message
-          example: Product created successfully
+          example: Product buyed successfully
         task:
           $ref: "#/components/schemas/Product"
 
@@ -60,7 +60,7 @@ components:
       properties:
         id:
           type: string
-          description: The task ID
+          description: The Product ID
           example: 1
         name:
           type: integers

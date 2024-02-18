@@ -1,7 +1,7 @@
 const productService = require('../services/product');
 const catchAsync = require('../middlewares/catchAsync');
 
-function productDto(task) {
+function productDto(product) {
   const {
     id, name, price, quantity, createdAt, updatedAt,
   } = product;
@@ -41,12 +41,6 @@ const updateProductById = catchAsync(async (req, res) => {
     switch (result.code) {
       case productService.errorCodes.AT_LEAST_ONE_UPDATE_REQUIRED_CODE:
         res.status(400).json({ success: false, message: 'at least one update required' });
-        return;
-      case productService.errorCodes.INVALID_STATUS_CODE:
-        res.status(400).json({ success: false, message: 'invalid status' });
-        return;
-      case productService.errorCodes.INVALID_STATUS_TRANSITION_CODE:
-        res.status(404).json({ success: false, message: 'task not found' });
         return;
       case productService.errorCodes.TASK_NOT_FOUND_CODE:
         res.status(400).json({ success: false, message: result.error });

@@ -5,9 +5,9 @@ const compression = require('compression');
 const prometheus = require('express-prom-bundle');
 const docs = require('./routes/docs');
 const health = require('./routes/health');
-// const v1 = require('./routes/v1');
-// const { errorHandler } = require('./middlewares/error');
-// const logger = require('./middlewares/logger');
+const v1 = require('./routes/v1');
+const { errorHandler } = require('./middlewares/error');
+const logger = require('./middlewares/logger');
 
 const app = express();
 
@@ -31,10 +31,10 @@ app.use('/docs', docs);
 // health API
 app.use('/health', health);
 
-// // V1 API
-// app.use('/v1', v1);
+// V1 API
+app.use('/v1', v1);
 
-// // error handler
-// app.use(errorHandler);
+// error handler
+app.use(errorHandler);
 
 module.exports = app;

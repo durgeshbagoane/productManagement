@@ -9,11 +9,11 @@ const ProductSchema = new Schema(
       required: true,
     },
     price: {
-      type: double,
+      type: Number,
       required: false,
     },
     quantity: {
-        type: integer,
+        type: Number,
         required: false,
     },
     createdAt: {
