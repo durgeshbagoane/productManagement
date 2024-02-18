@@ -1,0 +1,86 @@
+components:
+  schemas:
+    CreateProduct:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          description: The Product name
+          example: Shoes
+        price:
+          type: integers
+          description: The Product price
+          example: 45
+        quantity:
+          type: integers
+          description: The Product stock
+          example: 10
+
+    UpdateProduct:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The Product name
+          example: Shoes
+        price:
+          type: integers
+          description: The Product description
+          example: 45
+        quantity:
+          type: integers
+          description: The Product Quantity
+          example: 10 
+
+    ProductBuy:
+      type: object
+      required:
+        - success
+      properties:
+        success:
+          type: boolean
+          description: The product buyed
+          example: true
+        message:
+          type: string
+          description: The result message
+          example: Product created successfully
+        task:
+          $ref: "#/components/schemas/Product"
+
+    Product:
+      type: object
+      required:
+        - id
+        - name
+        - price
+        - quantity
+      properties:
+        id:
+          type: string
+          description: The task ID
+          example: 1
+        name:
+          type: integers
+          description: The Product name
+          example: Shoe
+        price:
+          type: integers
+          description: The product price
+          example: 45
+        createdAt:
+          type: string
+          format: date-time
+          description: The Product creation date
+          example: 2021-01-01T00:00:00.000Z
+        updatedAt:
+          type: string
+          format: date-time
+          description: The Product update date
+          example: 2021-01-01T00:00:00.000Z
+        quantity:
+          type: integers
+          description: The product stock
+          example: 10
