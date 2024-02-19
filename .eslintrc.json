@@ -8,7 +8,7 @@
     "overrides": [
         {
             "files": [
-                "tests/**/*.js"
+                "test/**/*.js"
             ],
             "env": {
                 "jest": true

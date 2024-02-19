@@ -155,7 +155,7 @@ describe('Product', () => {
       ];
 
       data.forEach(({
-        name, productName, price, newProductName, newPrice, quantity, newQuantity,
+        name, productName, price, newProductName, newPrice, newQuantity,
       }) => {
         it(name, async () => {
           let response = await fetch(baseUrl, {
