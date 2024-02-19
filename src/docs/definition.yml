@@ -34,19 +34,19 @@ components:
           description: The Product Quantity
           example: 10 
 
-    ProductBuy:
+    ProductResult:
       type: object
       required:
         - success
       properties:
         success:
           type: boolean
-          description: The product buyed
+          description: The product results
           example: true
         message:
           type: string
           description: The result message
-          example: Product buyed successfully
+          example: Product retrive successfully
         task:
           $ref: "#/components/schemas/Product"
 

@@ -35,13 +35,9 @@ module.exports = router;
  *     content:
  *      application/json:
  *       schema:
- *        $ref: '#/components/schemas/ProductBuy'
+ *        $ref: '#/components/schemas/ProductResult'
  *    404:
  *     description: Product not found
- *     content:
- *      application/json:
- *       schema:
- *        $ref: '#/components/schemas/ProductBuy'
  *    500:
  *     description: Internal Server Error
  *  post:
@@ -68,13 +64,13 @@ module.exports = router;
  *     content:
  *      application/json:
  *       schema:
- *        $ref: '#/components/schemas/ProductBuy'
+ *        $ref: '#/components/schemas/ProductResult'
  *     404:
  *      description: Product not found
  *      content:
  *       application/json:
  *        schema:
- *         $ref: '#/components/schemas/ProductBuy'
+ *         $ref: '#/components/schemas/ProductResult'
  *     500:
  *      description: Internal Server Error
  * /v1/products:
@@ -94,7 +90,7 @@ module.exports = router;
  *     content:
  *      application/json:
  *       schema:
- *        $ref: '#/components/schemas/ProductBuy'
+ *        $ref: '#/components/schemas/ProductResult'
  *    500:
  *     description: Internal Server Error
  */
