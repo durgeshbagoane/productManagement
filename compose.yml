@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+    app:
+        build: .
+        ports:
+            - '8081:80'
+        depends_on:
+            - mongo
+        volumes:
+            - ./configs/docker.env:/app/configs/.env
+            - logs:/app/logs:rw
+
+    mongo:
+        image: mongo:5
+        restart: always
+        ports:
+            - 27017:27017
+        volumes:
+            - mongodata:/data/db
+        healthcheck:
+            test: echo 'db.runCommand("ping").ok' | mongo localhost:27017/productManagement --quiet
+            interval: 10s
+            timeout: 2s
+            retries: 5
+            start_period: 5s
+
+volumes:
+    mongodata:
+    logs:
