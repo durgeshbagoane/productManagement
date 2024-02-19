@@ -7,7 +7,6 @@
   "author": "Durgesh Bagoane",
   "license": "MIT",
   "private": false,
-  "type": "module",
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
@@ -17,8 +16,13 @@
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
     "Faker": "^0.7.2",
+    "babel": "^6.23.0",
+    "babel-jest": "^29.7.0",
     "compression": "^1.7.4",
     "dotenv": "^16.4.4",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
     "express": "^4.18.2",
     "express-mongo-sanitize": "^2.2.0",
     "express-prom-bundle": "^7.0.0",
@@ -33,5 +37,9 @@
     "swagger-ui-express": "^5.0.0",
     "winston": "^3.11.0",
     "xss-clean": "^0.1.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1"
   }
 }

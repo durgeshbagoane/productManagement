@@ -15,8 +15,8 @@ const app = express();
 app.use(prometheus());
 app.use(express.json());
 
-// // logger
-// app.use(logger);
+// logger
+app.use(logger);
 
 // sanitize request data
 app.use(xss());

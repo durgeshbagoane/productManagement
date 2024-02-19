@@ -74,7 +74,7 @@ describe('Product', () => {
             body: JSON.stringify({
               name: 'product 1',
               price: 2,
-              quantity:4,
+              quantity: 4,
             }),
             headers: { 'Content-Type': 'application/json' },
           });
@@ -104,12 +104,12 @@ describe('Product', () => {
         });
 
         it('invalid status', async () => {
-          let response = await fetch(baseUrl, {
+          const response = await fetch(baseUrl, {
             method: 'put',
             body: JSON.stringify({
               name: 'Product 1',
               price: 1,
-              quantity:1,
+              quantity: 1,
             }),
             headers: { 'Content-Type': 'application/json' },
           });
@@ -143,7 +143,7 @@ describe('Product', () => {
         {
           name: 'english only name update',
           productName: 'Product 1',
-          price:1,
+          price: 1,
           newProductName: 'Product 1 New',
         },
         {
@@ -155,7 +155,7 @@ describe('Product', () => {
       ];
 
       data.forEach(({
-        name, productName, price, newProductName, newPrice,quantity, newQuantity,
+        name, productName, price, newProductName, newPrice, quantity, newQuantity,
       }) => {
         it(name, async () => {
           let response = await fetch(baseUrl, {

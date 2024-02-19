@@ -27,7 +27,7 @@ const getProductById = catchAsync(async (req, res) => {
 });
 
 const createProduct = catchAsync(async (req, res) => {
-  const result = await productService.createProduct(req.body.name, req.body.price,req.body.quantity);
+  const result = await productService.createProduct(req.body.name, req.body.price, req.body.quantity);
 
   res.status(201).json({
     success: true,

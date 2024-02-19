@@ -13,8 +13,8 @@ const ProductSchema = new Schema(
       required: false,
     },
     quantity: {
-        type: Number,
-        required: false,
+      type: Number,
+      required: false,
     },
     createdAt: {
       type: Date,

@@ -5,10 +5,9 @@ function getProductById(id) {
   return Product.findById(id);
 }
 
-function createProduct(name,price,quantity) {
-  return Product.create({ name,price,quantity });
+function createProduct(name, price, quantity) {
+  return Product.create({ name, price, quantity });
 }
-
 
 const AT_LEAST_ONE_UPDATE_REQUIRED_CODE = 0;
 const TASK_NOT_FOUND_CODE = 3;

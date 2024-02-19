@@ -27,12 +27,12 @@ describe('ProductService', () => {
       const name = faker.string.uuid();
       const price = faker.number.int;
       const quantity = faker.number.int;
-      jest.spyOn(Product, 'create').mockResolvedValue({ name, price,quantity });
-      const result = await productService.createProduct(name, price ,quantity);
+      jest.spyOn(Product, 'create').mockResolvedValue({ name, price, quantity });
+      const result = await productService.createProduct(name, price, quantity);
       expect(result.name).toEqual(name);
       expect(result.price).toEqual(price);
       expect(result.quantity).toEqual(quantity);
-      expect(Product.create).toBeCalledWith({ name, price ,quantity });
+      expect(Product.create).toBeCalledWith({ name, price, quantity });
     });
   });
 });
